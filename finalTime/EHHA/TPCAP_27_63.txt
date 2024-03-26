@@ -1,0 +1,41 @@
+I am building the collision lookup table... done!
+missing goal or start
+I am seeing the map...
+when setting map in Planner, height: 247 width: 337
+I am seeing a new start x:45 y:175 t:269.992
+missing goal or start
+I am seeing a new goal x:240 y:155 t:0.00572958
+瓶颈宽度: 27.188
+nodeBou number5
+0 45 175 4.71225
+1 93 127 5.49779
+2 91 129 5.49779
+3 198 136 0
+findBou Finished!
+start 45 175 4.71225
+总迭代次数: 1229
+npred 82.2466 119.519 5.02176
+goal 83.1005 117.1015.06145
+Hybrid3D结束搜索总的搜索次数: 1229
+start 82.2466 119.519 5.02176
+总迭代次数: 1
+npred 82.2466 119.519 5.02176
+goal 82.5147 120.5155.06145
+Hybrid3D结束搜索总的搜索次数: 1
+start 82.2466 119.519 5.02176
+Hybrid3D已经过了 9999 次搜索未搜索到结果
+Hybrid3D已经过了 19999 次搜索未搜索到结果
+Hybrid3D已经过了 29999 次搜索未搜索到结果
+Hybrid3D已经过了 39999 次搜索未搜索到结果
+总迭代次数: 44347
+npred 186.515 134.324 0.409931
+goal 188 1360.349066
+Hybrid3D结束搜索总的搜索次数: 44347
+start 186.515 134.324 0.409931
+总迭代次数: 1294
+npred 238.578 155.108 0.0385181
+goal 240 1550.0001
+Hybrid3D结束搜索总的搜索次数: 1294
+split HA搜索消耗时间: 2709  ms
+整个流程连带可视化和人关闭窗口时间 in ms: 2710.027817000
+point_index: 1

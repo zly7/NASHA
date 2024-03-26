@@ -1,0 +1,74 @@
+I am building the collision lookup table... done!
+missing goal or start
+I am seeing the map...
+when setting map in Planner, height: 200 width: 276
+I am seeing a new start x:65 y:180 t:269.863
+missing goal or start
+I am seeing a new goal x:150 y:120 t:0
+2D A* 使用时间: 67  ms
+寻找到狭窄点对消耗时间: 0  ms
+进行直线搜索
+直接使用直线生成的时候NarrowSpace的时候有误,增加偏移量
+直接使用直线生成的时候NarrowSpace的时候有误,增加偏移量
+直接使用直线生成的时候NarrowSpace的时候有误,增加偏移量
+进行直线搜索
+进行直线搜索
+直接使用直线生成的时候NarrowSpace的时候有误,增加偏移量
+直接使用直线生成的时候NarrowSpace的时候有误,增加偏移量
+直接使用直线生成的时候NarrowSpace的时候有误,增加偏移量
+直接使用直线生成的时候NarrowSpace的时候有误,增加偏移量
+进行直线搜索
+进行直线搜索
+直接使用直线生成的时候NarrowSpace的时候有误,增加偏移量
+直接使用直线生成的时候NarrowSpace的时候有误,增加偏移量
+进行直线搜索
+寻找到狭窄点对的可行域消耗时间: 0  ms
+start 65 180 4.71
+Hybrid3D已经过了 9999 次搜索未搜索到结果
+Hybrid3D已经过了 19999 次搜索未搜索到结果
+Hybrid3D已经过了 29999 次搜索未搜索到结果
+Hybrid3D已经过了 39999 次搜索未搜索到结果
+Hybrid3D已经过了 49999 次搜索未搜索到结果
+Hybrid3D已经过了 59999 次搜索未搜索到结果
+Hybrid3D已经过了 69999 次搜索未搜索到结果
+Hybrid3D已经过了 79999 次搜索未搜索到结果
+Hybrid3D已经过了 89999 次搜索未搜索到结果
+总迭代次数: 115487
+npred 57.3626 49.3264 6.25755
+goal 59.216 471.74846e-07
+Hybrid3D结束搜索总的搜索次数: 115487
+第0次搜索结束
+start 57.3626 49.3264 6.25755
+总迭代次数: 30
+npred 112.05 47.9242 6.25755
+goal 114.077 471.74846e-07
+Hybrid3D结束搜索总的搜索次数: 30
+第1次搜索结束
+start 112.05 47.9242 6.25755
+总迭代次数: 11
+npred 123.761 47.5031 0.0362679
+goal 125.077 471.74846e-07
+Hybrid3D结束搜索总的搜索次数: 11
+第2次搜索结束
+start 123.761 47.5031 0.0362679
+总迭代次数: 46
+npred 168.672 46.9556 6.25755
+goal 171.077 471.74846e-07
+Hybrid3D结束搜索总的搜索次数: 46
+第3次搜索结束
+start 168.672 46.9556 6.25755
+Hybrid3D已经过了 9999 次搜索未搜索到结果
+总迭代次数: 10426
+npred 204.564 121.928 0.221974
+goal 203.203 123.0430.218166
+Hybrid3D结束搜索总的搜索次数: 10426
+第4次搜索结束
+start 204.564 121.928 0.221974
+总迭代次数: 241
+npred 152.157 120.743 6.25755
+goal 150 1200
+Hybrid3D结束搜索总的搜索次数: 241
+多次HA搜索消耗时间: 1481  ms
+AlgorithmContour总花时间: 1548  ms
+整个流程连带可视化和人关闭窗口时间 in ms: 1574.584290000
+point_index: 1

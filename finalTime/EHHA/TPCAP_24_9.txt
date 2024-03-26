@@ -1,0 +1,70 @@
+I am building the collision lookup table... done!
+missing goal or start
+I am seeing the map...
+when setting map in Planner, height: 200 width: 276
+I am seeing a new start x:65 y:180 t:269.863
+missing goal or start
+I am seeing a new goal x:150 y:120 t:0
+瓶颈宽度: 27.188
+nodeBou number6
+0 65 180 4.71
+1 73 169 5.49779
+2 71 171 5.49779
+3 75 87 4.71239
+4 196 116 3.14159
+findBou Finished!
+start 65 180 4.71
+总迭代次数: 84
+npred 64.4702 158.682 5.01951
+goal 61.6863 157.6865.06145
+Hybrid3D结束搜索总的搜索次数: 84
+start 64.4702 158.682 5.01951
+总迭代次数: 15
+npred 63.8796 160.544 5.01951
+goal 62.5147 162.5155.06145
+Hybrid3D结束搜索总的搜索次数: 15
+start 63.8796 160.544 5.01951
+总迭代次数: 429
+npred 72.0229 108.677 4.71
+goal 75 1074.62512
+Hybrid3D结束搜索总的搜索次数: 429
+start 72.0229 108.677 4.71
+Hybrid3D已经过了 9999 次搜索未搜索到结果
+Hybrid3D已经过了 19999 次搜索未搜索到结果
+Hybrid3D已经过了 29999 次搜索未搜索到结果
+Hybrid3D已经过了 39999 次搜索未搜索到结果
+Hybrid3D已经过了 49999 次搜索未搜索到结果
+Hybrid3D已经过了 59999 次搜索未搜索到结果
+Hybrid3D已经过了 89999 次搜索未搜索到结果
+Hybrid3D已经过了 99999 次搜索未搜索到结果
+Hybrid3D已经过了 109999 次搜索未搜索到结果
+Hybrid3D已经过了 119999 次搜索未搜索到结果
+Hybrid3D已经过了 129999 次搜索未搜索到结果
+Hybrid3D已经过了 139999 次搜索未搜索到结果
+Hybrid3D已经过了 159999 次搜索未搜索到结果
+Hybrid3D已经过了 179999 次搜索未搜索到结果
+Hybrid3D已经过了 189999 次搜索未搜索到结果
+Hybrid3D已经过了 219999 次搜索未搜索到结果
+Hybrid3D已经过了 239999 次搜索未搜索到结果
+Hybrid3D已经过了 249999 次搜索未搜索到结果
+Hybrid3D已经过了 259999 次搜索未搜索到结果
+Hybrid3D已经过了 279999 次搜索未搜索到结果
+Hybrid3D已经过了 309999 次搜索未搜索到结果
+Hybrid3D已经过了 369999 次搜索未搜索到结果
+Hybrid3D已经过了 379999 次搜索未搜索到结果
+Hybrid3D已经过了 409999 次搜索未搜索到结果
+Hybrid3D已经过了 429999 次搜索未搜索到结果
+Hybrid3D已经过了 449999 次搜索未搜索到结果
+总迭代次数: 458607
+npred 220.689 115.138 2.97674
+goal 218 1162.96706
+Hybrid3D结束搜索总的搜索次数: 458607
+start 220.689 115.138 2.97674
+Hybrid3D已经过了 9999 次搜索未搜索到结果
+总迭代次数: 14669
+npred 151.716 120.726 0.0673463
+goal 150 1200
+Hybrid3D结束搜索总的搜索次数: 14669
+split HA搜索消耗时间: 5543  ms
+整个流程连带可视化和人关闭窗口时间 in ms: 5543.556605000
+point_index: 1

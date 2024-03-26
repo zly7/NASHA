@@ -1,0 +1,17 @@
+I am building the collision lookup table... done!
+missing goal or start
+I am seeing the map...
+when setting map in Planner, height: 248 width: 371
+I am seeing a new start x:291.524 y:80 t:293.228
+missing goal or start
+I am seeing a new goal x:80 y:168.1 t:342.459
+start 291.524 80 5.1178
+Hybrid3D已经过了 9999 次搜索未搜索到结果
+Hybrid3D已经过了 29999 次搜索未搜索到结果
+总迭代次数: 35331
+npred 81.1291 167.664 5.92253
+goal 80 168.15.97703
+Hybrid3D结束搜索总的搜索次数: 35331
+HA搜索消耗时间: 812  ms
+整个流程连带可视化和人关闭窗口时间 in ms: 812.252993000
+point_index: 1

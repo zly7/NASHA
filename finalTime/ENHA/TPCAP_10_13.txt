@@ -1,0 +1,46 @@
+I am building the collision lookup table... done!
+missing goal or start
+I am seeing the map...
+when setting map in Planner, height: 450 width: 250
+I am seeing a new start x:80 y:150 t:227.46
+missing goal or start
+I am seeing a new goal x:191.51 y:370.644 t:350.295
+2D A* 使用时间: 31  ms
+寻找到狭窄点对消耗时间: 1  ms
+寻找到狭窄点对的可行域消耗时间: 0  ms
+start 80 150 3.96992
+通过dubinShot 命中结束点
+nSucc 107.732 150.442
+goal 107.726 150.48
+第0次搜索结束
+start 107.732 150.442 1.74662
+Hybrid3D已经过了 9999 次搜索未搜索到结果
+Hybrid3D已经过了 19999 次搜索未搜索到结果
+Hybrid3D已经过了 29999 次搜索未搜索到结果
+Hybrid3D已经过了 49999 次搜索未搜索到结果
+Hybrid3D已经过了 69999 次搜索未搜索到结果
+Hybrid3D已经过了 79999 次搜索未搜索到结果
+Hybrid3D已经过了 99999 次搜索未搜索到结果
+Hybrid3D已经过了 109999 次搜索未搜索到结果
+Hybrid3D已经过了 119999 次搜索未搜索到结果
+Hybrid3D已经过了 139999 次搜索未搜索到结果
+Hybrid3D已经过了 149999 次搜索未搜索到结果
+Hybrid3D已经过了 179999 次搜索未搜索到结果
+Hybrid3D已经过了 209999 次搜索未搜索到结果
+Hybrid3D已经过了 239999 次搜索未搜索到结果
+Hybrid3D已经过了 269999 次搜索未搜索到结果
+Hybrid3D已经过了 279999 次搜索未搜索到结果
+Hybrid3D已经过了 289999 次搜索未搜索到结果
+Hybrid3D已经过了 299999 次搜索未搜索到结果
+Hybrid3D已经过了 309999 次搜索未搜索到结果
+Hybrid3D已经过了 319999 次搜索未搜索到结果
+Hybrid3D已经过了 329999 次搜索未搜索到结果
+Hybrid3D已经过了 369999 次搜索未搜索到结果
+总迭代次数: 378323
+npred 193.842 370.525 6.17275
+goal 191.51 370.6446.1138
+Hybrid3D结束搜索总的搜索次数: 378323
+多次HA搜索消耗时间: 4102  ms
+AlgorithmContour总花时间: 4134  ms
+整个流程连带可视化和人关闭窗口时间 in ms: 4179.483123000
+point_index: 1
