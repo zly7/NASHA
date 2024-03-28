@@ -23,3 +23,6 @@ Node2D* Node2D::getSuccessor(const int i,Node2D* nodeArray,const int width,const
 bool Node2D::operator == (const Node2D& rhs) const {
   return x == rhs.x && y == rhs.y;
 }
+bool Node2D::equalWithTol(const Node2D rhs,int tol) const {
+  return (abs(x - rhs.x) <= tol) && (abs(y - rhs.y) <= tol);
+}

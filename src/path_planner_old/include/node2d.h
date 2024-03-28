@@ -78,6 +78,7 @@ class Node2D {
   void updateH(const Node2D& goal) { h = movementCost(goal); }
   float movementCost(const Node2D& pred) const { return sqrt((x - pred.x) * (x - pred.x) + (y - pred.y) * (y - pred.y)); }
   bool operator == (const Node2D& rhs) const;
+  bool equalWithTol(const Node2D rhs, int tol) const;
   bool isOnGrid(const int width, const int height) const;
   Node2D* createSuccessor(const int i);
   Node2D* getSuccessor(const int i,Node2D* nodeArray,const int width,const int height);

@@ -5,10 +5,10 @@
 #include <vector>
 namespace HybridAStar {
 namespace Constants {
-static const std::string algorithm = "rrt";
+static const std::string algorithm = "hybrid_astar";
 static const bool coutDEBUG = true;
 static const bool manual = true;
-static const bool visualization = false && manual;
+static const bool visualization = true && manual;
 static const bool visualizationStartAndGoal = true && manual;
 static const bool visualization2D = true && manual;
 static const bool reverse = true;
@@ -23,7 +23,7 @@ static const float heuristicDecayCoefficient = algorithm=="contour_hybrid_astar"
 static const int iterations = 5000000;
 static const int iterationsToPrint = 10000;
 static const double bloating = 0;
-static const double each_meter_to_how_many_pixel = 10;
+static const double each_meter_to_how_many_pixel = 10.0;
 static const double width = 1.942 * each_meter_to_how_many_pixel + 2 * bloating;
 static const bool useRearAsCenter = true;
 static const double frontHangLength = 0.960 * each_meter_to_how_many_pixel;

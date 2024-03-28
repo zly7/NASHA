@@ -48,8 +48,10 @@ void Planner::setMap(const nav_msgs::OccupancyGrid::Ptr map) {
   for (int x = 0; x < width; x++) { binMap[x] = new bool[height]; }
   for (int x = 0; x < width; ++x) {
     for (int y = 0; y < height; ++y) {
+      std::cout  << map->data[y * width + x];
       binMap[x][y] = map->data[y * width + x] ? true : false;
     }
+    std::cout << std::endl;
   }
   voronoiDiagram.initializeMap(width, height, binMap);
   voronoiDiagram.update();

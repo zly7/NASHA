@@ -3,35 +3,6 @@
 using namespace HybridAStar;
 RrtAlgorithm::RrtAlgorithm() {
 }
-Node2D* RrtAlgorithm::rrt(Node2D& start,
-                          const Node2D& goal,
-                          Node2D* nodes2D,
-                          int width,
-                          int height,
-                          CollisionDetection& configurationSpace,
-                          Visualize& visualization,
-                          int maxIterations) {
-    std::vector<Node2D*> tree;
-    tree.push_back(&start);
-    Node2D* nearestNode;
-    Node2D* newNode;
-    for (int i = 0; i < maxIterations; ++i) {
-        Node2D randomNode = sampleRandomNode(width, height);
-        nearestNode = findNearestNode(tree, randomNode);
-        newNode = generateNewNode(nearestNode, randomNode);
-        newNode->setPred(nearestNode);
-        if (configurationSpace.isTraversable(newNode)) {
-            tree.push_back(newNode);
-            if (Constants::visualization2D) {
-                visualization.publishNode2DPoses(*newNode);
-            }
-            if (newNode->getIdx() == goal.getIdx()) {
-                return newNode; 
-            }
-        }
-    }
-    return nullptr;
-}
 Node2D* RrtAlgorithm::rrtStar(Node2D& start,
                               const Node2D& goal,
                               Node2D* nodes2D,
@@ -43,9 +14,12 @@ Node2D* RrtAlgorithm::rrtStar(Node2D& start,
     std::vector<Node2D*> tree;
     tree.push_back(&start);
     start.setG(0);
+    minX = start.getX() - Constants::wheelBase;
+    maxX = start.getX() + Constants::wheelBase;
+    minY = start.getY() - Constants::wheelBase;
+    maxY = start.getY() + Constants::wheelBase;
     Node2D* nearestNode;
     Node2D* newNode;
-    ros::Duration d(0.001);
     for (int i = 0; i < maxIterations; ++i) {
         Node2D randomNode = sampleRandomNode(width, height);
         nearestNode = findBestParent(tree, randomNode, configurationSpace);
@@ -61,18 +35,12 @@ Node2D* RrtAlgorithm::rrtStar(Node2D& start,
             if (Constants::visualization2D) {
                 visualization.publishNode2DPoses(*newNode);
             }
-            if (newNode->getIdx() == goal.getIdx()) {
+            if (newNode->equalWithTol(goal, Constants::arcLengthForAstarSuccessor)){
                 return newNode; 
             }
         }
-        std::cout<<"迭代生成新的点"<<std::endl;
     }
     return nullptr;
-}
-Node2D RrtAlgorithm::sampleRandomNode(int width, int height) {
-    int x = std::rand() % width;
-    int y = std::rand() % height;
-    return Node2D(x, y);
 }
 Node2D* RrtAlgorithm::findNearestNode(const std::vector<Node2D*>& tree, const Node2D& randomNode) {
     Node2D* nearestNode = nullptr;
@@ -88,7 +56,7 @@ Node2D* RrtAlgorithm::findNearestNode(const std::vector<Node2D*>& tree, const No
     return nearestNode;
 }
 Node2D* RrtAlgorithm::generateNewNode(const Node2D* nearestNode, const Node2D& randomNode) {
-    const float stepSize = 2*Constants::arcLengthForAstarSuccessor;
+    const float stepSize = Constants::arcLengthForAstarSuccessor;
     float dx = randomNode.getX() - nearestNode->getX();
     float dy = randomNode.getY() - nearestNode->getY();
     float mag = sqrt(dx * dx + dy * dy);
@@ -113,16 +81,19 @@ Node2D* RrtAlgorithm::findBestParent(std::vector<Node2D*>& tree, const Node2D& r
 void RrtAlgorithm::rewire(std::vector<Node2D*>& tree, Node2D* newNode, CollisionDetection& configurationSpace) {
     std::vector<Node2D*> nearbyNodes = findNearbyNodes(tree, *newNode);
     for (Node2D* potentialChild : nearbyNodes) {
-        float newCost = newNode->getG() + distance(*newNode, *potentialChild);
-        if (newCost < potentialChild->getG()) {
-            potentialChild->setPred(newNode);
-            potentialChild->setG(newCost);
+        float distanceGap = distance(*newNode, *potentialChild);
+        if(distanceGap < Constants::arcLengthForAstarSuccessor * 1.5){
+            float newCost = newNode->getG()+distanceGap;
+            if (newCost < potentialChild->getG()) {
+                potentialChild->setPred(newNode);
+                potentialChild->setG(newCost);
+            }
         }
     }
 }
 std::vector<Node2D*> RrtAlgorithm::findNearbyNodes(const std::vector<Node2D*>& tree, const Node2D& node) {
     std::vector<Node2D*> nearbyNodes;
-    float searchRadius = 5; 
+    float searchRadius = Constants::wheelBase;
     for (Node2D* potentialNode : tree) {
         if (distance(node, *potentialNode) <= searchRadius) {
             nearbyNodes.push_back(potentialNode);
@@ -133,4 +104,17 @@ std::vector<Node2D*> RrtAlgorithm::findNearbyNodes(const std::vector<Node2D*>& t
 float RrtAlgorithm::distance(const Node2D& nodeA, const Node2D& nodeB) {
     return std::sqrt(std::pow(nodeA.getX() - nodeB.getX(), 2) +
                      std::pow(nodeA.getY() - nodeB.getY(), 2));
+}
+Node2D RrtAlgorithm::sampleRandomNode(int width, int height) {
+    int x = std::rand() % width;
+    int y = std::rand() % height;
+    return Node2D(x, y);
+}
+void RrtAlgorithm::updateExpansionRange(Node2D* newNode, int width, int height) {
+    if (newNode) {
+        minX = std::max(1, std::min(newNode->getX(), minX));
+        maxX = std::min(width, std::max(newNode->getX(), maxX));
+        minY = std::max(1, std::min(newNode->getY(), minY));
+        maxY = std::min(height, std::max(newNode->getY(), maxY));
+    }
 }

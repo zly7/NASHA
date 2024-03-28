@@ -8,14 +8,10 @@ namespace HybridAStar {
 class RrtAlgorithm {
 public:
     RrtAlgorithm();
-    Node2D* rrt(Node2D& start,
-                const Node2D& goal,
-                Node2D* nodes2D,
-                int width,
-                int height,
-                CollisionDetection& configurationSpace,
-                Visualize& visualization,
-                int maxIterations);
+    int minX;
+    int minY;
+    int maxX;
+    int maxY;
     Node2D* rrtStar(Node2D& start, const Node2D& goal, Node2D* nodes2D,
                     int width, int height, CollisionDetection& configurationSpace,
                     Visualize& visualization, int maxIterations);
@@ -30,6 +26,7 @@ private:
     Node2D sampleRandomNode(int width, int height);
     Node2D* findNearestNode(const std::vector<Node2D*>& tree, const Node2D& randomNode);
     Node2D* generateNewNode(const Node2D* nearestNode, const Node2D& randomNode);
+    void updateExpansionRange(Node2D* newNode,int width, int height);
 };
 }
 #endif 
